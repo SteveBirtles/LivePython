@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Interpreter with Live Syntax Checking</title>
+    <link rel="stylesheet" href="./style.css">
+    
+    <link rel="stylesheet" href="./codemirror/codemirror.min.css">
+    <link rel="stylesheet" href="./codemirror/theme/dracula.min.css">
+    <link rel="stylesheet" href="./codemirror/addon/lint/lint.min.css">
+
+</head>
+<body>
+    <div id="main-container">
+        <h1>Python Interpreter with Live Syntax Checking</h1>
+        <div id="code-container">
+            <div id="loading">Starting Python...</div>
+            <div id="python-code"></div>
+            <div id="syntax-errors"></div>
+        </div>
+        <div id="output-container">
+            <pre id="output"></pre>
+            <button id="run-button">Run Code</button>
+        </div>
+    </div>
+
+    <script src="./codemirror/codemirror.min.js"></script>
+    <script src="./codemirror/mode/python/python.min.js"></script>
+    <script src="./codemirror/addon/lint/lint.min.js"></script>
+
+    <script type="module" src="./script.js"></script>
+</body>
+</html>

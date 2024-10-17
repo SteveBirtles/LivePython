@@ -1,0 +1,149 @@
+/* Set the background color of the body */
+body {
+    background-color: navy;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the main container */
+#main-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto; /* Center horizontally */
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* Style the headings */
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+#loading {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-top: 100px;
+    font-size: 20px;
+    color: green;
+}
+
+/* Code container to position code editor and error box */
+#code-container {
+    position: relative;
+    margin-bottom: 20px;
+    min-height: 300px;
+}
+
+/* Style the CodeMirror editor */
+#python-code {
+    width: 100%;
+}
+
+.CodeMirror {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+/* Style the syntax errors box */
+#syntax-errors {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: red;
+    white-space: pre-wrap;
+    font-family: monospace;
+    background-color: #f8d7da; /* Light red background for errors */
+    border: 1px solid #f5c6cb; /* Border matching the error theme */
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 40%;
+    border-radius: 4px;
+    display: none; /* Hidden by default */
+}
+
+/* Output container to position output and run button */
+#output-container {
+    position: relative;
+}
+
+/* Style the output area to look like a terminal window */
+#output {
+    background-color: #1e1e1e; /* Dark background */
+    color: #d4d4d4; /* Light text */
+    font-family: monospace;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 300px;
+    overflow: auto;
+    white-space: pre-wrap;
+    border: 1px solid #333;
+    border-radius: 4px;
+    font-size: 16pt;
+}
+
+/* Style the run button to float over the output area */
+#run-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 18px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 4px;
+}
+
+/* Hover effect for the run button */
+#run-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Hide the run button when it has the 'hidden' class */
+#run-button.hidden {
+    display: none;
+}
+
+/* Style the run button when it is disabled */
+#run-button:disabled {
+    background-color: #cccccc; /* Gray background when disabled */
+    cursor: not-allowed; /* Show "not-allowed" cursor */
+    color: #666666; /* Lighter text color */
+}
+
+/* Remove hover effect when the button is disabled */
+#run-button:disabled:hover {
+    background-color: #cccccc; /* Keep the gray color */
+}
+
+
+/* Additional visual improvements */
+/* Style scrollbars to match the terminal look */
+#output::-webkit-scrollbar {
+    width: 10px;
+}
+
+#output::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+#output::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+    border: 2px solid #1e1e1e;
+}
+
+/* Style lint markers in CodeMirror */
+.CodeMirror-lint-marker-error {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23ff0000" viewBox="0 0 24 24"><path d="M12 0C5.37255 0 0 5.37255 0 12C0 18.6275 5.37255 24 12 24C18.6275 24 24 18.6275 24 12C24 5.37255 18.6275 0 12 0ZM13 17H11V15H13V17ZM13 13H11V7H13V13Z"/></svg>');
+    background-size: 16px;
+    background-repeat: no-repeat;
+}
